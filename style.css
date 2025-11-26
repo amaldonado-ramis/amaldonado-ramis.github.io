@@ -4,6 +4,7 @@
     --color-main: #D94F3F;
     --color-cta: #F1A800;
     --color-cmpt: #6E7B3E;
+    --color-shadow: #222222;
 }
 
 
@@ -13,8 +14,8 @@
     font-weight: normal; font-style: normal;
 }
 
-* { margin: 0; font-family: "LovaBold"; }
-body { background: var(--color-bg); width: 90%; margin: 0 auto; overflow: hidden; }
+* { margin: 0 auto; font-family: "LovaBold"; }
+body { background: var(--color-bg); width: 90%; overflow: hidden; }
 header { margin-top: 10px; }
 header img { width: 100%; }
 
@@ -35,15 +36,15 @@ nav .selected { color: var(--color-cmpt); }
 .hero-container img:nth-child(1) {
     position: absolute; left: -25%; top: 5%;
     transform: rotate(5deg); width: 60%;
-    -webkit-filter: drop-shadow(0 10px 20px #222222);
-    filter: drop-shadow(0 10px 20px #222222);
+    -webkit-filter: drop-shadow(0 10px 20px var(--color-shadow));
+    filter: drop-shadow(0 10px 20px var(--color-shadow));
 }
 
 .hero-container img:nth-child(3) {
     position: absolute; right: -25%; top: 30%;
     transform: rotate(310deg); width: 55%;
-    -webkit-filter: drop-shadow(-5px 10px 20px #222222);
-    filter: drop-shadow(-5px 10px 20px #222222);
+    -webkit-filter: drop-shadow(-5px 10px 20px var(--color-shadow));
+    filter: drop-shadow(-5px 10px 20px var(--color-shadow));
 }
 
 .hero-text {
