@@ -14,7 +14,7 @@
     font-weight: normal; font-style: normal;
 }
 
-* { margin: 0 auto; font-family: "LovaBold"; }
+* { margin: 0 auto; box-sizing: border-box; font-family: "LovaBold"; }
 body { background: var(--color-bg); width: 90%; overflow: hidden; }
 header { margin-top: 10px; }
 header img { width: 100%; }
@@ -23,9 +23,10 @@ nav {
     position: fixed; display: grid;
     grid-template-columns: repeat(3, 1fr); color: var(--color-text);
     width: 90%; height: 10%; bottom: 0; left: 0; right: 0; margin: auto;
-    text-align: center; align-items: center; background: var(--color-bg);
+    text-align: center; align-items: center;
     border-top: 5px solid rgba(0, 0, 0, .5); border-radius: 30px 30px 0 0;
 }
+nav p { position: absolute; visibility: hidden; }
 nav .selected { color: var(--color-cmpt); }
 
 .hero-container {
@@ -33,22 +34,38 @@ nav .selected { color: var(--color-cmpt); }
     margin-top: 5%; border-radius: 10px;
 }
 
-.hero-container img:nth-child(1) {
-    position: absolute; left: -25%; top: 5%;
-    transform: rotate(5deg); width: 60%;
-    -webkit-filter: drop-shadow(0 10px 20px var(--color-shadow));
+
+.hero-img {
+    position: absolute; width: 60%; pointer-events: none;
     filter: drop-shadow(0 10px 20px var(--color-shadow));
 }
 
-.hero-container img:nth-child(3) {
-    position: absolute; right: -25%; top: 30%;
-    transform: rotate(310deg); width: 55%;
-    -webkit-filter: drop-shadow(-5px 10px 20px var(--color-shadow));
-    filter: drop-shadow(-5px 10px 20px var(--color-shadow));
-}
+.hero-pizza { left: -25%; transform: rotate(5deg); }
+.hero-pulpo { right: -25%; transform: rotate(310deg); }
 
 .hero-text {
     position: relative; color: var(--color-text);
     top: 50%; transform: translateY(-50%); text-align: center;
     z-index: 1; font-size: 24px; line-height: 1;
+}
+
+@media only screen and (min-width: 1200px) {
+    body { width: 100%; }
+    header { 
+        padding: 20px 40px; display: grid; 
+        grid-template-columns: repeat(3, 1fr); align-items: center;
+    }
+
+    nav {
+        border-top: none; position: relative;
+        display: flex; left: 100%;
+    }
+
+    nav a { cursor: pointer; }
+    nav i { position: absolute; visibility: hidden; }
+
+    nav p {
+        position: static;  visibility: visible;
+        font-size: 3rem; line-height: 1;
+    }
 }
