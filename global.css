@@ -12,7 +12,7 @@
 }
 
 * { margin: 0; box-sizing: border-box; color: var(--color-text); }
-body { background: var(--color-bg); }
+body { background: var(--color-bg); max-width: 1920px; margin: 0 auto; }
 main { padding: var(--padding); font-family: 'Lato', sans-serif; }
 
 h1 { font-family: 'Climate Crisis', sans-serif; }
