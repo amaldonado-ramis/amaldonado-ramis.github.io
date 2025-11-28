@@ -10,6 +10,7 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="global.css">
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v7.1.0/css/all.css" />
     </head>
@@ -18,7 +19,11 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
         <header>
-            <img src="./static/images/BANNER 2.png" alt="LOGO" />
+            <picture>
+                <source media="(max-width:699px)" srcset="./static/images/mobile-logo.png">
+                <source media="(min-width:700px)" srcset="./static/images/desktop-logo.png">
+                <img src="./static/images/mobile-logo.png" alt="LOGO" />
+            </picture>
             <nav>
                 <a><i class="fa-solid fa-house fa-2xl selected"></i><p class="selected">HOME</p></a>
                 <a><i class="fa-solid fa-plate-utensils fa-2xl"></i><p>MENU</p></a>
@@ -27,14 +32,12 @@
         </header>
 
         <main>
-            <img src="./static/images/pizza.png" class="hero-img pizza" alt="" />
             <div class="hero-container">
                 <div class="hero-text">
-                    <h1>EL EQUILIBRIO PERFECTO</h1>
-                    <h3>MAR Y TIERRA EN CADA BOCADO</h3>
+                    <h1>EL EQUILIBRIO<span class="important">PERFECTO</span></h1>
+                    <h4>MAR Y TIERRA EN CADA BOCADO</h4>
                 </div>
             </div>
-            <img src="./static/images/polipetti.png" class="hero-img pulpo" alt="" />
         </main>
         
         <script src="" async defer></script>
