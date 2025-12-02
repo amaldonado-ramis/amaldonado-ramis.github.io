@@ -14,15 +14,16 @@
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v7.1.0/css/all.css" />
     </head>
-    <body class="dark">
+    <body>
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
         <header>
-            <div class="logo">
-                <img src="./static/images/logo.png" alt="LOGO" />
-                <h1>ORO NERO</h1>
-            </div>
+            <picture>
+                <source media="(max-width:699px)" srcset="./static/images/mobile-logo.png">
+                <source media="(min-width:700px)" srcset="./static/images/desktop-logo.png">
+                <img src="./static/images/mobile-logo.png" alt="LOGO" />
+            </picture>
             <nav>
                 <a><i class="fa-solid fa-house fa-2xl selected"></i><p class="selected">HOME</p></a>
                 <a><i class="fa-solid fa-plate-utensils fa-2xl"></i><p>MENU</p></a>
@@ -30,14 +31,24 @@
             </nav>
         </header>
 
-        <main></main>
-
-        <footer>
-            <div class="switch">
-                <i class="fa-solid fa-moon"></i>
+        <main>
+            <div class="hero-container">
+                <div class="hero-text">
+                    <h1>EL EQUILIBRIO <span class="important">PERFECTO</span></h1>
+                    <h4>MAR Y TIERRA EN CADA BOCADO</h4>
+                </div>
+                <div class="schedule">
+                    <button class="schedule">
+                        <i class="fa-solid fa-calendar fa-xl"></i> RESERVAR
+                    </button>
+                    <button class="about-us important">
+                        <i class="fa-solid fa-calendar fa-xl"></i> PEDIR YA
+                    </button>
+                </div>
+                <iframe class="map" frameborder="0" scrolling="no" src="https://maps.google.com/maps?hl=es&q=IES%20Joan%20Ramis%20i%20Ramis&t=&z=16&ie=UTF8&output=embed"></iframe>
             </div>
-        </footer>
+        </main>
         
-        <script src="main.js" async defer></script>
+        <script src="" async defer></script>
     </body>
 </html>
