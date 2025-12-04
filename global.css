@@ -57,9 +57,8 @@ button.schedule { background: var(--cta); width: 90%; }
 
 /* ========== HEADER ========== */
 header { border-bottom: 5px solid var(--text); padding: calc(var(--padding) / 2); text-align: center; }
-header, header nav { background: var(--bg-light); }
+header, header nav { background: var(--bg-light); z-index: 1; }
 
-header div.logo { text-align: center; line-height: 1; }
 header img[alt="LOGO"] { width: 20%; }
 header div.logo img, header div.logo h1 { display: inline-block; vertical-align: middle; }
 header div.logo h1 { margin-left: 10px; }
@@ -92,7 +91,7 @@ img[alt="DISH IMAGE"] { aspect-ratio: 16 / 9; object-fit: fill; width: 100%; bor
 .card-text { overflow: hidden; white-space: nowrap; text-align: start; }
 p.dish-name { margin-bottom: 5px; }
 p.dish-type-price { color: var(--text-light); font-size: .9em; }
-.card:hover, .card:focus { box-shadow: 0 0px 20px var(--shadow) inset; background: var(--bg); }
+.card:hover, .card:active { box-shadow: 0 0px 20px var(--shadow) inset; background: var(--bg); }
 
 /* ========== DESKTOP ========== */
 @media only screen and (min-width: 1200px) {

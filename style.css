@@ -6,8 +6,17 @@
     box-shadow: 0 5px 10px 0 var(--shadow), 0 5px 20px var(--bg-light) inset;
 }
 
+.card:nth-child(3n) { margin: 10px 0 20px 0; }
+
 .hero-schedule-container { padding-bottom: calc(var(--padding) / 2); }
 .about-us-container .about-us-text { text-align: justify; }
+
+.about-us-container { padding: 0; filter: drop-shadow(0 5px 20px var(--shadow)); }
+.about-us-curved-container {
+    background: var(--bg); margin-top: 50px;
+    clip-path: ellipse(200% 100% at bottom);
+    padding: var(--padding);
+}
 
 
 /* ========== DESKTOP ========== */
