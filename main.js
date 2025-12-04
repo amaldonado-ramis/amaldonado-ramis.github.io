@@ -36,6 +36,6 @@ function addCards() {
     dishesCardsContainer.innerHTML = cardsHTML;
 }
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", () => {
     addCards();
 });
