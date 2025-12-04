@@ -1,8 +1,8 @@
 const dishes = [
     {"name": "Pepperoni", "price": 10.99, "category": "Pizza", "img": "pizza.jpg"},
-    {"name": "Caponata Siciliana", "price": 19.50, "category": "Aperitivo", "img": "caponata_siciliana.jpg"},
-    {"name": "Pasta alla Norma", "price": 19.50, "category": "Pasta", "img": "pasta_alla_norma.jpg"},
-    {"name": "Carpaccio", "price": 12.99, "category": "Carne", "img": "pizza.jpg"}
+    {"name": "Caponata Siciliana", "price": 19.50, "category": "Aperi.", "img": "caponata_siciliana.jpg"},
+    {"name": "Alla Norma", "price": 19.50, "category": "Pasta", "img": "pasta_alla_norma.jpg"},
+    {"name": "Carpaccio", "price": 12.99, "category": "Carne", "img": "carpaccio.jpg"}
 ]
 
 const body = document.body;
