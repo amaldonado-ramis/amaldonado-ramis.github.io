@@ -5,16 +5,6 @@ const dishes = [
     {"name": "Carpaccio", "price": 12.99, "category": "Carne", "img": "carpaccio.jpg"}
 ]
 
-const body = document.body;
-// const switchBtn = document.querySelector(".switch");
-// const icon = switchBtn.querySelector("i");
-
-// switchBtn.addEventListener("click", () => {
-//     const isDark = body.classList.toggle("dark");
-//     body.classList.toggle("light", !isDark);
-//     icon.className = isDark ? "fa-solid fa-moon" : "fa-solid fa-sun-bright";
-// });
-
 function addCards() {
     let dishesCardsContainer = document.querySelector('.dishes-cards');
     let cardsHTML = '';

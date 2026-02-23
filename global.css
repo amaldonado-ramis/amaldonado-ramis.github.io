@@ -100,14 +100,8 @@ p.dish-type-price { color: var(--text-light); font-size: .9em; }
         table-layout: fixed; font-family: 'Climate Crisis', sans-serif; padding: var(--padding);
     }
 
-    img[alt="LOGO"] { width: 100%; }
-    header div.logo {
-        display: table-cell; text-align: center;
-        vertical-align: middle;
-    }
-
+    header div.logo { display: flex; }
     header p, button { cursor: pointer; }
-
     header nav {
         position: static; display: table-cell; vertical-align: middle;
         text-align: right; width: 100%; transform: none; border: 0;

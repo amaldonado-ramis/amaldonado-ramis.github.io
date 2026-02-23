@@ -1,0 +1,19 @@
+div.menu-cards {
+  display: grid; grid-template-columns: repeat(2, auto);
+  padding: 0 10px 10px 10px; gap: 10px;
+}
+
+div.card { width: 100%; }
+
+.filter {
+  display: flex;
+  padding: 10px 10px 0 10px;
+  gap: 10px;
+  overflow: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.filter::-webkit-scrollbar {
+  display: none;
+}
