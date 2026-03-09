@@ -1,19 +1,87 @@
 div.menu-cards {
-  display: grid; grid-template-columns: repeat(2, auto);
+  display: grid; grid-template-columns: repeat(2, 1fr);
   padding: 0 10px 10px 10px; gap: 10px;
 }
 
-div.card { width: 100%; }
-
-.filter {
-  display: flex;
-  padding: 10px 10px 0 10px;
-  gap: 10px;
-  overflow: auto;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+div.card { display: grid; width: 100%; margin: 0; }
+div.details {
+    display: flex; padding: 20px;
+    align-items: center; justify-content: center;
 }
 
-.filter::-webkit-scrollbar {
-  display: none;
+div.detail-card {
+    border: 5px solid var(--shadow);
+    border-radius: 20px;
+    background: var(--bg-light);
+}
+
+div.card-image { display: flex; }
+div.card-image img { max-width: 100%; border-radius: 15px 15px 0px 0px; border-bottom: 5px solid var(--shadow); }
+div.card-detail {
+    display: flex; flex-direction: column;
+    gap: 10px; padding: 10px; text-align: center;
+}
+
+div.card-allergies { padding: 10px; }
+div.allergy {
+    display: flex; justify-content: center;
+    flex-wrap: wrap; gap: 10px;
+}
+
+div.box {
+    display: flex;
+    align-items: center; justify-content: center;
+    height: 50px; width: 50px;
+    border-radius: 25%; background: white;
+}
+
+div.filter-container {
+    position: sticky; top: 0;
+    padding: 5px;
+}
+
+div.filter {
+    display: flex; gap: 10px; border-radius: 10px;
+    overflow: auto; padding: 5px;
+    -ms-overflow-style: none; scrollbar-width: none;
+
+    background: oklch(from var(--bg-dark) l c h / .5);
+    backdrop-filter: blur(5px); z-index: 1;
+    /* mask-image: linear-gradient(to bottom, black 90%, transparent 100%); */
+}
+
+.filter::-webkit-scrollbar { display: none; }
+
+
+div.modal-container {
+    display: flex; z-index: 2;
+    align-items: center; justify-content: center;
+    position: fixed; top: 0;
+    height: 100vh; width: 100vw;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+div.details {
+    max-width: 600px; width: 100%;
+    max-height: 90vh; overflow-y: auto;
+}
+
+/* ========== TABLET ========== */
+@media only screen and (min-width: 768px) {
+    div.filter button { padding: 15px 25px; }
+}
+
+/* ========== DESKTOP ========== */
+@media only screen and (min-width: 1200px) {
+    div.menu-cards { grid-template-columns: repeat(4, 1fr); }
+    div.card { justify-self: center; }
+    div.filter {
+        display: flex; padding: 10px;
+        justify-content: space-evenly; border-radius: 10px;
+        -ms-overflow-style: none; scrollbar-width: none;
+
+        background: oklch(from var(--bg-dark) l c h / .5);
+        backdrop-filter: blur(5px);
+        /* mask-image: linear-gradient(to bottom, black 90%, transparent 100%); */
+    }
 }

@@ -29,6 +29,7 @@ h1, h2, h3{ text-align: center; }
 h1 { color: var(--text-dark); }
 h2, h3 { color: var(--text); }
 h4 { color: var(--text-light); }
+a { text-decoration: none; color: var(--text); }
 
 .bold { font-weight: bold; }
 
@@ -39,6 +40,9 @@ h4 { color: var(--text-light); }
     border: 5px solid var(--text);
     border-radius: 20px; box-shadow: 0 2px 10px var(--shadow);
 }
+
+.show { opacity: 1; pointer-events: auto; }
+.hide { opacity: 0; pointer-events: none; }
 
 .glass {
     border-radius: 1em;
@@ -62,6 +66,7 @@ header, header nav { background: var(--bg-light); z-index: 1; }
 header img[alt="LOGO"] { width: 20%; }
 header div.logo img, header div.logo h1 { display: inline-block; vertical-align: middle; }
 header div.logo h1 { margin-left: 10px; }
+header div.logo { display: flex; justify-content: space-between; }
 
 header nav {
     width: 100%; height: 10%; position: fixed;
@@ -89,12 +94,18 @@ header p { display: none; }
 .card, img[alt="DISH IMAGE"] { border-radius: var(--padding); }
 img[alt="DISH IMAGE"] { aspect-ratio: 16 / 9; object-fit: fill; width: 100%; border: 3px solid var(--text-light); }
 .card-text { overflow: hidden; white-space: nowrap; text-align: start; }
-p.dish-name { margin-bottom: 5px; }
+p.dish-name { margin-bottom: 5px; overflow: hidden; text-overflow: ellipsis; }
 p.dish-type-price { color: var(--text-light); font-size: .9em; }
 .card:hover, .card:active { box-shadow: 0 0px 20px var(--shadow) inset; background: var(--bg); }
 
-/* ========== DESKTOP ========== */
+/* ========== TABLET ========== */
+@media only screen and (min-width: 768px) {
+    header div.logo { display: initial; }
+}
+
+/* ========== DESKTOP LARGE ========== */
 @media only screen and (min-width: 1200px) {
+    body { margin-bottom: auto; }
     header {
         width: 100%; display: table; border-bottom: 5px solid var(--text);
         table-layout: fixed; font-family: 'Climate Crisis', sans-serif; padding: var(--padding);
