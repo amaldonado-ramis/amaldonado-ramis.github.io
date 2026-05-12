@@ -12,8 +12,12 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <link rel="stylesheet" href="/static/css/global.css">
       <link rel="stylesheet" href="/static/css/style.css">
-      <link rel="stylesheet" href="/static/css/menu.css">
+      <link rel="stylesheet" href="/static/css/reservation.css">
+      <link rel="stylesheet" href="/static/css/datepicker.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+
+      <script type="module" src="https://cdn.jsdelivr.net/npm/wc-datepicker/dist/esm/wc-datepicker.js"></script>
+
   </head>
   <body>
     <!--[if lt IE 7]>
@@ -22,7 +26,7 @@
     
     <header>
       <div class="logo">
-        <img src="../static/images/ITFast.svg" alt="LOGO">
+        <img src="/static/images/ITFast.svg" alt="LOGO">
         <h1>ITFast</h1>
       </div>
       <nav>
@@ -32,20 +36,22 @@
       </nav>
     </header>
     <main>
-      <div class="filter-container">
-        <div class="filter">
-          <button id="pizza">Pizza</button>
-          <button id="pasta">Pasta</button>
-          <button id="carne">Carne</button>
-          <button id="veganos">Veganos</button>
+      <div class="reservation-container">
+        <div class="card">
+          <select name="" id="">
+            <option value="1">1 Persona</option>
+            <option value="2">2 Personas</option>
+            <option value="3">3 Personas</option>
+            <option value="4">4 Personas</option>
+            <option value="5">5 Personas</option>
+          </select>
+
+          <wc-datepicker></wc-datepicker>
         </div>
       </div>
-      
-      <div class="menu-cards"></div>
-      <div class="modal-container hide"></div>
     </main>
-      
+          
     <script src="/static/js/main.js"></script>
-    <script src="/static/js/menu.js"></script>
+    <script data-cfasync="false" data-tockify-script="embed" src="https://public.tockify.com/browser/embed.js"></script>
   </body>
 </html>

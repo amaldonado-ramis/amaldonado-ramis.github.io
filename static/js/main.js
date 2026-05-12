@@ -5,6 +5,7 @@ const dishes = [
     {"name": "Carpaccio", "price": 12.99, "category": "Carne", "img": "carpaccio.jpg"}
 ]
 
+
 function addCards() {
     let dishesCardsContainer = document.querySelector('.dishes-cards');
     let cardsHTML = '';
@@ -26,4 +27,21 @@ function addCards() {
     dishesCardsContainer.innerHTML = cardsHTML;
 }
 
-document.addEventListener("DOMContentLoaded", () => { addCards(); });
+function setSelected() {
+    const url = window.location.pathname;
+    var path = url.substring(url.lastIndexOf('/') + 1).replace('.html', '');
+    if (!path) { path = 'home'; }
+
+    const elements = document.getElementById(path).children;
+    for (let i = 0; i < elements.length; i++) { elements[i].classList.add('selected'); }
+}
+
+document.addEventListener("DOMContentLoaded", () => { setSelected(); addCards(); });
+document.addEventListener("click", (event) => {
+    const path = event.target.offsetParent.id;
+    if (!path) { return }
+
+    if (path != 'home') { window.location.href = '/pages/' + path + '.html'; }
+    else { window.location.href = '/'; }
+
+})
